@@ -3,15 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/hero_bg_gradient"
-    android:backgroundTint="@mipmap/hero_bg_gradient"
+    android:background="@drawable/hero_bg_gradient"
     tools:context="com.carolinecourtney.herome.Fragments.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/hero_bg_gradient"
-        android:backgroundTint="@mipmap/hero_bg_gradient"
+        android:background="@drawable/hero_bg_gradient"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -33,7 +31,7 @@
                 android:cropToPadding="true"
                 android:foregroundGravity="center_horizontal|fill_horizontal"
                 android:padding="0dp"
-                android:src="@mipmap/top_banner_bar" />
+                android:src="@drawable/top_banner_bar" />
         </android.support.v7.widget.Toolbar>
 
         <ImageView
@@ -42,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             app:srcCompat="@drawable/heroes" />
 
         <Button
@@ -51,9 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:background="@mipmap/hero_button"
-            android:drawableLeft="@mipmap/lightning"
-            android:drawableRight="@mipmap/item_selected"
+            android:background="@drawable/hero_button"
+            android:drawableLeft="@drawable/lightning"
+            android:drawableRight="@drawable/item_selected"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:text="Came by Accident"
@@ -65,9 +63,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:background="@mipmap/hero_button"
-            android:drawableLeft="@mipmap/atomic"
-            android:drawableRight="@mipmap/item_selected"
+            android:background="@drawable/hero_button"
+            android:drawableLeft="@drawable/atomic"
+            android:drawableRight="@drawable/item_selected"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:text="Genetic Mutation"
@@ -79,9 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:background="@mipmap/hero_button"
-            android:drawableLeft="@mipmap/rocket"
-            android:drawableRight="@mipmap/item_selected"
+            android:background="@drawable/hero_button"
+            android:drawableLeft="@drawable/rocket"
+            android:drawableRight="@drawable/item_selected"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:text="Born with them"
@@ -93,8 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:background="@mipmap/hero_solid_button"
-            android:backgroundTint="     #fac740"
+            android:background="@drawable/hero_solid_button"
+            android:backgroundTint="#fac740"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:text="Choose Powers"
