@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.carolinecourtney.herome.R;
 
@@ -18,7 +19,7 @@ import com.carolinecourtney.herome.R;
  * Use the {@link MainFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -27,6 +28,11 @@ public class MainFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Button accidentBtn;
+    private Button geneticBtn;
+    private Button bornBtn;
+    private Button chooseBtn;
 
     private MainFragmentInteractionListener mListener;
 
@@ -64,8 +70,46 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        accidentBtn = (Button)view.findViewById(R.id.accidentBtn);
+        geneticBtn = (Button)view.findViewById(R.id.geneticBtn);
+        bornBtn = (Button)view.findViewById(R.id.bornBtn);
+        chooseBtn = (Button)view.findViewById(R.id.chooseBtn);
+
+        accidentBtn.setOnClickListener(this);
+        geneticBtn.setOnClickListener(this);
+        bornBtn.setOnClickListener(this);
+
+        chooseBtn.setEnabled(false);
+        chooseBtn.getBackground().setAlpha(128);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        chooseBtn.setEnabled(true);
+        chooseBtn.getBackground().setAlpha(255);
+
+        accidentBtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lightning, 0, 0, 0);
+        geneticBtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.atomic, 0, 0, 0);
+        bornBtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.rocket, 0, 0, 0);
+
+        Button btn = (Button)v;
+        int leftDrawable = 0;
+
+
+        if (btn == accidentBtn) {
+            leftDrawable = R.drawable.lightning;
+        } else if (btn == geneticBtn) {
+            leftDrawable = R.drawable.atomic;
+        } else if (btn == bornBtn) {
+            leftDrawable = R.drawable.rocket;
+        }
+
+        btn.setCompoundDrawablesRelativeWithIntrinsicBounds(leftDrawable, 0, R.drawable.item_selected, 0);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
