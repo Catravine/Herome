@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/hero_bg_gradient"
+    android:backgroundTint="@mipmap/hero_bg_gradient"
     tools:context="com.carolinecourtney.herome.Fragments.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/background_dark"
-        android:backgroundTint="@android:color/background_dark"
+        android:background="@mipmap/hero_bg_gradient"
+        android:backgroundTint="@mipmap/hero_bg_gradient"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -38,8 +40,66 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="15dp"
             app:srcCompat="@drawable/heroes" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/hero_button"
+            android:drawableLeft="@mipmap/lightning"
+            android:drawableRight="@mipmap/item_selected"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="Came by Accident"
+            android:textColor="#fac740" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/hero_button"
+            android:drawableLeft="@mipmap/atomic"
+            android:drawableRight="@mipmap/item_selected"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="Genetic Mutation"
+            android:textColor="#fac740" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/hero_button"
+            android:drawableLeft="@mipmap/rocket"
+            android:drawableRight="@mipmap/item_selected"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="Born with them"
+            android:textColor="#fac740" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/hero_solid_button"
+            android:backgroundTint="     #fac740"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="Choose Powers"
+            android:textColor="#10161D"
+            android:textSize="22dp" />
 
     </LinearLayout>
 
